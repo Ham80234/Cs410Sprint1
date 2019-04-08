@@ -1,9 +1,51 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Profile
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card>
+      <ion-img src="https://i.kinja-img.com/gawker-media/image/upload/s--Tg_qqR3r--/c_scale,f_auto,fl_progressive,q_80,w_800/dnmtn4ksijwyep0xmljk.jpg"></ion-img>
+  </ion-card>
 
+  <ion-card>
+     <ion-item>
+        <ion-card-title >John  Smith</ion-card-title>
+     </ion-item>
+     <ion-item>
+        <ion-card-subtitle >Weight: 168 lbs</ion-card-subtitle>
+     </ion-item>
+     <ion-item>
+        <ion-card-subtitle >Height:  5'11''</ion-card-subtitle>
+     </ion-item>
+     
+    </ion-card>
+
+
+  <ion-card>
+    
+    <ion-item>
+      <ion-card-subtitle>Goals Completion: </ion-card-subtitle>
+      <ion-progress-bar value="0.6"></ion-progress-bar>
+    </ion-item>
+  </ion-card>
+  
+  <ion-card>
+   <ion-item>
+    <ion-card-subtitle>Todays Workout: </ion-card-subtitle>
+   </ion-item> 
+   <ion-item>
+     <h1>13/15</h1>
+   </ion-item>
+   <ion-item>
+    <ion-card-subtitle slot= "end">Excersize completed </ion-card-subtitle>
+   </ion-item> 
+  </ion-card>
+  
 </ion-content>
