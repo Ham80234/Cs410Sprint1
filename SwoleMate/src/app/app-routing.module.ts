@@ -11,10 +11,6 @@ const routes: Routes = [
     path: 'home',
     loadChildren: './home/home.module#HomePageModule'
   },
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  },
   { 
     path: 'progress', 
     loadChildren: './progress/progress.module#ProgressPageModule' 
@@ -22,7 +18,8 @@ const routes: Routes = [
   { 
     path: 'profile', 
     loadChildren: './profile/profile.module#ProfilePageModule'
-   }
+   },
+  { path: 'popover', loadChildren: './popover/popover.module#PopoverPageModule' }
 ];
 
 @NgModule({

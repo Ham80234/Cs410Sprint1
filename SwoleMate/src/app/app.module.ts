@@ -8,11 +8,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
-@NgModule({
-  declarations: [AppComponent],
+import {  PopoverPageModule } from '../app/popover/popover.module'
+ @NgModule({
+  declarations: [AppComponent,],
   entryComponents: [],
   imports: [
+    PopoverPageModule,
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule
