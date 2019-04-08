@@ -11,7 +11,7 @@
 
         <ion-list *ngIf="item.open">
            <ion-list-header *ngFor="let child of item.Children">
-               <ion-button>{{child.name}}</ion-button>
+               <ion-button (click) = "addWorkout(child.name, child.amount)">{{child.name}}</ion-button>
            </ion-list-header>
         </ion-list>
            
@@ -19,4 +19,5 @@
     </ion-list-header>
          
    </ion-list>
+
 </ion-content>
