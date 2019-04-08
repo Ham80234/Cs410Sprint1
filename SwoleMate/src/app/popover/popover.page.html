@@ -2,13 +2,21 @@
 
 <ion-content>
     <ion-list>
-            <ion-item (click) = "ToggleChild(i)" *ngFor="let item of information, let i = index">
-                    <ion-label>{{item.name}}</ion-label>
-                    
-                    <ion-list *ngIf="item.open" >
-                            <p *ngFor="let child of item.Children">{{child}}</p>
-                     </ion-list>    
-            </ion-item>
+        <ion-list-header *ngFor="let item of information, let i = index">
+        <ion-button (click)="ToggleChild(i)">
+            <ion-icon slot="start" name="arrow-down" *ngIf="item.open"></ion-icon>
+            <ion-icon slot="start" name="arrow-forward" *ngIf="!item.open"></ion-icon>
+            {{item.name}}
+        </ion-button>
+
+        <ion-list *ngIf="item.open">
+           <ion-list-header *ngFor="let child of item.Children">
+               <ion-button>{{child.name}}</ion-button>
+           </ion-list-header>
+        </ion-list>
+           
+        
+    </ion-list-header>
          
    </ion-list>
 </ion-content>

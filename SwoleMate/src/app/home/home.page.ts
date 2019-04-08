@@ -7,7 +7,8 @@ import { PopoverPage } from '../popover/popover.page'
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
- value = 0
+  value = 0
+  workout: any[] =[]
   constructor(public popoverController: PopoverController){
 
   }
@@ -21,5 +22,12 @@ export class HomePage {
      
    })
    popover.present()
+ }
+
+ addWorkout(Name, amount){
+  this.workout.push({
+    name: Name,
+    amount: amount
+  })
  }
 }

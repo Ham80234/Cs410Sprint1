@@ -12,22 +12,62 @@ export class PopoverPage implements OnInit {
   ngOnInit() {
     this.information.push({
       name: "Arms",
-      Children: ["Push Ups", "Dumb Bells "],
+      Children: [
+        {
+          name : "push-ups",
+          amount : ""
+      }, 
+      {
+        name : "pull-ups",
+        amount : ""
+     }
+
+      ],
       open: false
     })
     this.information.push({
       name: "Legs",
-      Children: ["Leg machine", "Squats"],
+      Children: [
+        {
+          name : "leg-machine",
+          amount : ""
+      }, 
+      {
+        name : "squats",
+        amount : ""
+     }
+
+      ],
       open: false
     })
     this.information.push({
       name: "Core",
-      Children: ["Curl Ups", "Russian Twists "],
+      Children: [
+        {
+          name : "curl-ups",
+          amount : ""
+      }, 
+      {
+        name : "russian twists",
+        amount : ""
+     }
+
+      ],
       open: false
     })
     this.information.push({
       name: "Cardio",
-      Children: ["Running", "Rowing machine"],
+      Children: [
+        {
+          name : "running",
+          amount : ""
+      }, 
+      {
+        name : "Rowing machine ",
+        amount : ""
+    
+      }
+    ],
       open: false
     })
     console.log(this.information)
