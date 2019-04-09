@@ -1,9 +1,55 @@
 <ion-header>
   <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>  
     <ion-title>Progress</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <ion-card padding>
+      <ion-title>Progress</ion-title>
+      <ion-card-subtitle>This is a Graph that represents the differnece in your workouts</ion-card-subtitle>
+        <div>
+            <div>
+              <div style="display: block">
+                <canvas baseChart
+                  [data]='DChartData'
+                  [labels]='DChartLabels'
+                  [chartType]='DChartType'>
+                </canvas>
+              </div>
+            </div>
+          </div>
+  
+      
+    </ion-card>
+ <ion-card padding>
+   <ion-card-title>Growth</ion-card-title>
+   <ion-card-subtitle>This is a graph that can you can use to trck groth in differnt area's</ion-card-subtitle>
+   <div>
+      <div>
+        <div style="display: block">
+          <canvas baseChart
+            [datasets]="radarChartData"
+            [options]="radarChartOptions"
+            [labels]="radarChartLabels"
+            [chartType]="radarChartType">
+          </canvas>
+        </div>
+      </div>
+    </div>
+ </ion-card>
+<ion-card>
+  <ion-card-title>Goal Completion </ion-card-title>
+  
+  <ion-list>
+    <ion-item *ngFor="let item of Goal">
+      <ion-label>test</ion-label>
+     
+    </ion-item>
+    
+  </ion-list>
+</ion-card>
 </ion-content>

@@ -1,3 +1,4 @@
+import { PopoverController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopoverPage implements OnInit {
 
-  constructor() { }
+  constructor(public popoverController: PopoverController) { }
   information: any[] = []
   ngOnInit() {
     this.information.push({
@@ -15,11 +16,14 @@ export class PopoverPage implements OnInit {
       Children: [
         {
           name : "push-ups",
-          amount : ""
+          amount: 15,
+          suffix: "sets"
+
       }, 
       {
         name : "pull-ups",
-        amount : ""
+        amount: 10,
+        suffix: "sets"
      }
 
       ],
@@ -30,11 +34,14 @@ export class PopoverPage implements OnInit {
       Children: [
         {
           name : "leg-machine",
-          amount : ""
+          amount: 30,
+          suffix: "sets"
+
       }, 
       {
         name : "squats",
-        amount : ""
+        amount: 20,
+        suffix: "sets"
      }
 
       ],
@@ -45,11 +52,14 @@ export class PopoverPage implements OnInit {
       Children: [
         {
           name : "curl-ups",
-          amount : ""
+          amount: 15,
+          suffix: "sets"
+
       }, 
       {
         name : "russian twists",
-        amount : ""
+        amount: 15,
+        suffix: "sets"
      }
 
       ],
@@ -60,12 +70,14 @@ export class PopoverPage implements OnInit {
       Children: [
         {
           name : "running",
-          amount : ""
+          amount: 1,
+          suffix: "miles"
+
       }, 
       {
         name : "Rowing machine ",
-        amount : ""
-    
+        amount: 1,
+        suffix: "miles"
       }
     ],
       open: false
@@ -79,7 +91,10 @@ export class PopoverPage implements OnInit {
     this.information[i].open = !this.information[i].open 
    
   }
-
+  dismiss(i , j){
+    console.log(this.information[i].Children[j])
+    this.popoverController.dismiss(this.information[i].Children[j]);
+  }
    
   
 }

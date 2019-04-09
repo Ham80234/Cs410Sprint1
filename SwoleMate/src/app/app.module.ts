@@ -9,10 +9,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {  PopoverPageModule } from '../app/popover/popover.module'
+import {ChartsModule} from 'ng2-charts'
  @NgModule({
   declarations: [AppComponent,],
   entryComponents: [],
-  imports: [
+  imports: [ChartsModule, 
+  
     PopoverPageModule,
     BrowserModule,
     IonicModule.forRoot(),

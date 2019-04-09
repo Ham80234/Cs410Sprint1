@@ -10,8 +10,8 @@
         </ion-button>
 
         <ion-list *ngIf="item.open">
-           <ion-list-header *ngFor="let child of item.Children">
-               <ion-button (click) = "addWorkout(child.name, child.amount)">{{child.name}}</ion-button>
+           <ion-list-header *ngFor="let child of item.Children, let j = index">
+               <ion-button (click) = "dismiss(i, j)">{{child.name}}</ion-button>
            </ion-list-header>
         </ion-list>
            

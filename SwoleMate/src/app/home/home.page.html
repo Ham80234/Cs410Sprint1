@@ -21,7 +21,8 @@
      
       <ion-item *ngFor="let item of workout">
          <ion-title>{{item.name}}</ion-title>
-         <ion-label>Amount: {{item.amount}}</ion-label> 
+         <ion-input type="number" placeholder="{{item.amount}}"></ion-input>
+          <ion-card-subtitle>{{item.suffix}}</ion-card-subtitle>
           <ion-checkbox></ion-checkbox>
       
       </ion-item> 
@@ -40,7 +41,7 @@
 <ion-footer>
   <ion-item class= "CenterHome">
     <ion-button fill="outline">Import</ion-button>
-    <ion-button fill="outline">Progress</ion-button>
+    <ion-button fill="outline" (click) = 'ProgressopenPopover()'>Progress</ion-button>
     <ion-button fill="outline">Goals</ion-button>
 </ion-item>
 </ion-footer>
