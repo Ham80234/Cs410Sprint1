@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Workout</ion-title>
+    <ion-button slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-button>
+    <ion-title>Add Workout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-input type="text" placeholder="name" [(ngModel)]="newElem.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Body Part" [(ngModel)]="newElem.bodyPart"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Suffix" [(ngModel)]="newElem.suffix"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="saveWorkout()">
+   add
+  </ion-button>
+
+</ion-content>

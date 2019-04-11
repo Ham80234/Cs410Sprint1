@@ -10,11 +10,16 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {  PopoverPageModule } from '../app/popover/popover.module'
 import {ChartsModule} from 'ng2-charts'
+
+import { AngularFireModule } from 'angularfire2'
+import { AngularFirestoreModule } from 'angularfire2/firestore'
+import { environment } from '../environments/environment'
  @NgModule({
   declarations: [AppComponent,],
   entryComponents: [],
   imports: [ChartsModule, 
-  
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     PopoverPageModule,
     BrowserModule,
     IonicModule.forRoot(),

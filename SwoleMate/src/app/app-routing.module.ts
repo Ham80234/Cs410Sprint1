@@ -19,7 +19,8 @@ const routes: Routes = [
     path: 'profile', 
     loadChildren: './profile/profile.module#ProfilePageModule'
    },
-  { path: 'popover', loadChildren: './popover/popover.module#PopoverPageModule' }
+  { path: 'popover', loadChildren: './popover/popover.module#PopoverPageModule' },
+  { path: 'add-workout', loadChildren: './add-workout/add-workout.module#AddWorkoutPageModule' }
 ];
 
 @NgModule({
