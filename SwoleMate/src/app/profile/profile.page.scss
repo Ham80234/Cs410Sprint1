@@ -1,0 +1,50 @@
+.welcome-card ion-img {
+    max-height: 35vh;
+    overflow: hidden;
+  }
+  
+  ion-content{
+    --ion-background-color:#222831;
+  }
+  ion-header{
+    --ion-background-color:#5294e2;
+  }
+  .Wrapper{
+    position: absolute;
+    background-color: 	#7c818c;
+    padding-right: 500px;
+    padding-top: 100px;
+    margin: 0px;
+    border: 0px;
+  }
+  .title{
+    color: white
+  }
+  ion-footer{
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    right: 0;
+    background-color:#5294e2;  
+  }
+  ion-footer ion-button{
+    width:33%;
+    height: 50px;
+  }
+  .HomeContent{
+    --ion-background-color: #7c818c;
+    width: 100%;
+    padding-bottom: 300px;
+    border-radius: 3px;
+    margin: 10px;
+  }
+  
+  ion-datetime{
+     color: white;
+     font-size: 25px;
+  }
+  
+  
+  
+  
+  
